@@ -32,13 +32,13 @@ class GalleryCubit extends Cubit<GalleryState> {
   List<String> imagesPath = [];
 
   void init() async{
+
     ApiConstants.token = (sl<SharedPreferences>().getString(PrefConstants.isLoggedInKey));
 
      await getGalleryImages();
   }
 
   Future<void> getGalleryImages() async {
-    ApiConstants.token = (sl<SharedPreferences>().getString(PrefConstants.isLoggedInKey));
     emit(const ImagesLoading());
 
     Either<Failure, UserGalleryEntity> galleryResponse =

@@ -35,12 +35,12 @@ class CustomElevatedButton extends StatelessWidget {
             ),
             textStyle: TextStyle(
               color: Colors.white,
-              fontSize: 20.sp,
+              fontSize: 17.w,
             )),
         icon: SvgPicture.asset(
           svgAssetPath,
           width: 28.w,
-          height: 32.h,
+          height: 28.h,
         ),
         label: Text(text),
       ),

@@ -19,7 +19,7 @@ class DialogElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 164.w,
+      width: 166.w,
       height: 65.h,
 
 
@@ -33,10 +33,12 @@ class DialogElevatedButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.r),
             ),
             textStyle: TextStyle(
-              fontSize: 27.sp,
+              fontSize: 22.w,
               fontWeight: FontWeight.bold
             )),
         icon: Image.asset(imagePath,
+          width: 30.w,
+          height: 30.w,
             ),
         label: Text(text),
       ),

@@ -20,9 +20,11 @@ class RemoteDataSource implements BaseAuthRemoteDataSource {
         data: {"email": email, "password": password});
 
     if (response.statusCode == 200) {
+
       try {
         return UserModel.fromJson(response.data);
       } catch (e) {
+
         throw Failure(
           code: 200,
           error: 'Wrong email or password',
@@ -31,6 +33,7 @@ class RemoteDataSource implements BaseAuthRemoteDataSource {
 
       }
     } else {
+
       throw Failure(
         code: response.statusCode?? 911,
         error: "Something Wrong.",

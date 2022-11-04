@@ -1,6 +1,11 @@
+
+
 import 'package:dartz/dartz.dart';
 
+
 import 'package:promina_task/core/error/exception.dart';
+
+
 import 'package:promina_task/modules/auth/data/datasource/remote/remote_data_source.dart';
 import 'package:promina_task/modules/auth/data/models/user_model.dart';
 import 'package:promina_task/modules/auth/domain/entities/user_entity.dart';
@@ -18,7 +23,12 @@ class AuthRepositoryImpl implements BaseAuthRepository {
 
       return Right(user);
     } on Failure catch (e) {
+
+
+
       return left(e);
     }
   }
 }
+
+

@@ -59,10 +59,13 @@ class LoginForm extends StatelessWidget {
                 return SubmitButton(
                   onPressed: () {
                     if (viewModel.formKey.currentState!.validate()) {
+
                       viewModel.login(viewModel.emailController.text,
                           viewModel.passwordController.text);
+
                     } else {
-                      print("enter ur email");
+                      context.showSnackBar("email and password not valid");
+
                     }
                   },
                 );
@@ -78,10 +81,11 @@ class LoginForm extends StatelessWidget {
                     if (value) {
                       ApiConstants.token = sl<SharedPreferences>()
                           .getString(PrefConstants.isLoggedInKey);
+                      context.showSnackBar("Login Success",color: Colors.green);
                       Navigator.pushReplacementNamed(
                           context, Routes.galleryRoute);
                     }else{
-                      context.showSnackBar("try again later.");
+                      context.showSnackBar("local storage error. Try again");
                     }
                   });
                 }

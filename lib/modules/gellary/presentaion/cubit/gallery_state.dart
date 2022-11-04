@@ -30,9 +30,7 @@ class ImagesLoading extends GalleryState{
 class ImageUploadingSucess extends GalleryState{
 
   final  UploadEntity uploadEntity;
-   ImageUploadingSucess(this.uploadEntity){
-
-  }
+   const ImageUploadingSucess(this.uploadEntity);
 
 }
 

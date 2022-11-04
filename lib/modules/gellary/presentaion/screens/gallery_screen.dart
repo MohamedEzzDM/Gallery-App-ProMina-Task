@@ -124,7 +124,7 @@ class GalleryLogoutButton extends StatelessWidget {
             Navigator.pushReplacementNamed(
                 context, Routes.initialRoute);
           } else {
-            context.showSnackBar("try again later.");
+            context.showSnackBar("Can't Logout. Try again.");
           }
         });
       },
