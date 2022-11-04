@@ -31,7 +31,7 @@ Galley App is an application to fetch and upload your images. The data is provid
 </div>
 
 ## Video
-[![Watch the video](https://github.com/MohamedEzzDM/Gallery-App-ProMina-Task/blob/main/assets/screenshots/6.png)](https://www.youtube.com/watch?v=kD8kLUwM4tc)
+[![Watch the video](https://www.youtube.com/watch?v=kD8kLUwM4tc)
 
 ## Dependencies
 
