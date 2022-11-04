@@ -30,8 +30,13 @@ Galley App is an application to fetch and upload your images. The data is provid
     
 </div>
 
+
+
 ## Video
-[![Watch the video](https://www.youtube.com/watch?v=kD8kLUwM4tc)
+
+
+https://user-images.githubusercontent.com/110486631/199904419-7a4ebf74-2143-4f65-9c54-f52f45aff01d.mp4
+
 
 ## Dependencies
 
