@@ -59,11 +59,15 @@ class DioHelper implements ApiHelper {
       endPoint,
       queryParameters: query,
       cancelToken: cancelToken,
-    ).onError((error, stackTrace) => throw Failure(
+    ).onError((error, stackTrace) {
+
+
+      throw Failure(
       code: 100,
       error: "Dio error",
       message: "Try again later.",
-    ));
+    );
+    });
 
     return response;
   }

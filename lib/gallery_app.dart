@@ -23,6 +23,7 @@ class GalleryApp extends StatelessWidget {
             : false;
 
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           onGenerateRoute: AppRoutes.onGenerateRoute,
           initialRoute: AppConstance.isLoggedIn == true
               ? Routes.galleryRoute

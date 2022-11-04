@@ -9,7 +9,7 @@ import '../../injection_container.dart';
 
 class Routes {
   static const String initialRoute = '/';
-  static const String galleryRoute = '/gallery';
+  static const String galleryRoute = '/gellary';
 }
 
 class AppRoutes {

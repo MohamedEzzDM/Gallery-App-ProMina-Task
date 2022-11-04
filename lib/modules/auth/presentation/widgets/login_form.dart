@@ -62,7 +62,7 @@ class LoginForm extends StatelessWidget {
                       viewModel.login(viewModel.emailController.text,
                           viewModel.passwordController.text);
                     } else {
-                      print("eneter ur email");
+                      print("enter ur email");
                     }
                   },
                 );

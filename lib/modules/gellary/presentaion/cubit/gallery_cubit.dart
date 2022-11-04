@@ -33,19 +33,23 @@ class GalleryCubit extends Cubit<GalleryState> {
 
   void init() async{
     ApiConstants.token = (sl<SharedPreferences>().getString(PrefConstants.isLoggedInKey));
-    print(sl<SharedPreferences>().getString(PrefConstants.isLoggedInKey));
+
      await getGalleryImages();
   }
 
   Future<void> getGalleryImages() async {
     ApiConstants.token = (sl<SharedPreferences>().getString(PrefConstants.isLoggedInKey));
-    print(sl<SharedPreferences>().getString(PrefConstants.isLoggedInKey));
     emit(const ImagesLoading());
+
     Either<Failure, UserGalleryEntity> galleryResponse =
         await getGalleryImagesUsecase();
 
-    galleryResponse.fold((l) => emit(ImagesLoadingFail(l)),
+    galleryResponse.fold((l) {
+
+      emit(ImagesLoadingFail(l));
+    },
         (r) {
+
           imagesPath = r.images ?? [];
           emit(ImagesLoadingSucess(r.images ?? []));
         });

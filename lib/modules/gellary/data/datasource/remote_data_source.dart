@@ -20,20 +20,25 @@ class RemoteAuthDataSource implements BaseGalleryRemoteDataSource {
 
   @override
   Future<UserGalleryModel> getGalleryImages() async {
+
     final response = await apiHelper.get(
         endPoint: ApiConstants.myGallery, token: ApiConstants.token);
 
+
     if (response.statusCode == 200) {
-      print(response.data);
+
+
       return UserGalleryModel.fromJson(response.data);
     }
     if (response.statusCode == 500) {
+
       throw Failure(
         code: response.statusCode ?? 911,
         error: "Something Wrong. check token",
         message: 'try again later',
       );
     } else {
+
       throw Failure(
         code: response.statusCode ?? 911,
         error: "Something Wrong.",

@@ -31,7 +31,7 @@ class ImageUploadingSucess extends GalleryState{
 
   final  UploadEntity uploadEntity;
    ImageUploadingSucess(this.uploadEntity){
-    print("done");
+
   }
 
 }

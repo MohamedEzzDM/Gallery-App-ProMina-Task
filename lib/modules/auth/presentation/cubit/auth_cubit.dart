@@ -25,17 +25,17 @@ class AuthCubit extends Cubit<AuthState> {
 
   Future<void> login(String email,String password)async {
     emit(AuthLoading());
-    print("loading");
+
 
     Either<Failure,UserEntity> loginResponse = await loginUsecase(email,password);
     loginResponse.fold(
             (l) {
               emit(AuthFailure(failure: l));
-              print(l.message);
+
             },
             (r) {
               emit(AuthSuccess(user: r));
-              print(r.name);
+
             });
 
 
